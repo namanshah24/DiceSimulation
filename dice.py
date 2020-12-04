@@ -20,7 +20,9 @@ def roll():
         zero_dice_message.place(x=0,y=295)
         return
     number = ['\u2680','\u2681', '\u2682', '\u2683', '\u2684', '\u2685']
-    config_text = f"{random.choice(number)}"*number_of_dice
+    config_text =""
+    for i in range(number_of_dice):
+        config_text += f"{random.choice(number)}"
     # placing warning message labels out of the frame
     four_dice_message.place(x= -2000, y= -1000)  
     zero_dice_message.place(x= -2000, y= -1000)
